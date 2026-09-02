@@ -1,0 +1,4 @@
+/root/servic/service-main/src/test/java/com/example/demo/DemoApplicationTests.java
+/root/servic/service-main/src/test/java/com/example/demo/controller/AirRaidShelterControllerTest.java
+/root/servic/service-main/src/test/java/com/example/demo/controller/EarthquakeShelterControllerTest.java
+/root/servic/service-main/src/test/java/com/example/demo/controller/FloodShelterControllerTest.java
