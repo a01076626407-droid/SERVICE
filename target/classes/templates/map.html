@@ -5,13 +5,13 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>카카오 지도 프레임</title>
     <style>
-    html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; }
-    #map { width: 100%; height: 100%; }
+        html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; }
+        #map { width: 100%; height: 100%; }
     </style>
 
-    <!-- 💡 멘토의 리뷰: Thymeleaf의 리터럴 치환(| |)을 사용하여 안전하고 깔끔하게 API 키를 주입받습니다. -->
+    <!-- 카카오맵 SDK 로드 -->
     <script type="text/javascript"
-        th:src="|https://dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoKey}&libraries=services&autoload=false|">
+            th:src="|https://dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoKey}&libraries=services&autoload=false|">
     </script>
 </head>
 <body>
@@ -79,7 +79,7 @@
     }
 
     /**
-     * 💡 멘토의 리뷰: 이 코드가 우승한 결정적 이유입니다. 부모 창으로 화면 영역뿐만 아니라 '지도의 정중앙 좌표'까지 완벽하게 넘겨주도록 꼼꼼하게 짜여 있습니다.
+     * 부모 창으로 화면 영역 및 중심 좌표 전달
      */
     function notifyParentBounds() {
         if (!map) return;
@@ -87,7 +87,7 @@
         var bounds = map.getBounds();
         var sw = bounds.getSouthWest(); // 화면 남서쪽(좌하단)
         var ne = bounds.getNorthEast(); // 화면 북동쪽(우상단)
-        var center = map.getCenter();   // 💡 [핵심] 현재 지도의 정중앙 좌표 획득
+        var center = map.getCenter();   // 지도의 정중앙 좌표
 
         if (window.parent && typeof window.parent.filterByBounds === 'function') {
             window.parent.filterByBounds({
@@ -95,8 +95,8 @@
                 maxLat: ne.getLat(),
                 minLng: sw.getLng(),
                 maxLng: ne.getLng(),
-                centerLat: center.getLat(), // 💡 기준 위도 전달
-                centerLng: center.getLng()  // 💡 기준 경도 전달
+                centerLat: center.getLat(),
+                centerLng: center.getLng()
             });
         }
     }
@@ -107,7 +107,6 @@
     function searchPlace(keyword) {
         if (!isMapReady || !ps || !geocoder) return;
 
-        // 1순위: 행정동/지명(예: '신림', '신림동', '역삼동')인지 주소 검색 먼저 시도
         geocoder.addressSearch(keyword, function (addrResult, addrStatus) {
             if (addrStatus === kakao.maps.services.Status.OK && addrResult.length > 0) {
                 var target = addrResult[0];
@@ -115,13 +114,10 @@
                 return;
             }
 
-            // 2순위: 키워드 장소 검색 수행
             ps.keywordSearch(keyword, function (data, status, pagination) {
                 if (status === kakao.maps.services.Status.OK && data.length > 0) {
-
                     var bestPlace = data[0];
 
-                    // 지하철역(SW8)이나 검색어+역(예: 신림역)을 최우선 선택
                     for (var i = 0; i < data.length; i++) {
                         var item = data[i];
                         if (item.category_group_code === 'SW8' || item.place_name.includes(keyword + '역')) {
@@ -131,7 +127,6 @@
                     }
 
                     moveAndMarkPlace(bestPlace.y, bestPlace.x, bestPlace.place_name);
-
                 } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
                     alert("일치하는 장소를 찾을 수 없습니다.");
                 } else {
@@ -189,9 +184,8 @@
 
         dataList.forEach(function (shelter) {
             var lat = Number(shelter.lat);
-            var lng = Number(shelter.lng);
+            var lng = Number(shelter.lot); // 💡 [핵심 수정] 백엔드 엔티티의 경도 필드명(lot)과 정확히 매핑합니다!
 
-            // 💡 [멘토 수정 포인트] 좌표가 누락되었거나(null) 0인 데이터는 마커 생성을 안전하게 건너뜁니다.
             if (!lat || !lng || isNaN(lat) || isNaN(lng) || lat <= 0 || lng <= 0) {
                 return;
             }
