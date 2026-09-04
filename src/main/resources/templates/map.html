@@ -184,7 +184,7 @@
 
         dataList.forEach(function (shelter) {
             var lat = Number(shelter.lat);
-            var lng = Number(shelter.lot); // 💡 [핵심 수정] 백엔드 엔티티의 경도 필드명(lot)과 정확히 매핑합니다!
+            var lng = Number(shelter.lng || shelter.lot); // 💡 [핵심 수정] 백엔드 엔티티의 경도 필드명(lot)과 정확히 매핑합니다!
 
             if (!lat || !lng || isNaN(lat) || isNaN(lng) || lat <= 0 || lng <= 0) {
                 return;
