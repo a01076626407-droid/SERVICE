@@ -1,0 +1,87 @@
+nohup: ignoring input
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-09-05T01:44:05.624+09:00  INFO 2064 --- [demo] [           main] com.example.demo.DemoApplication         : Starting DemoApplication v0.0.1-SNAPSHOT using Java 17.0.20.1 with PID 2064 (/root/SERVICE/target/demo-0.0.1-SNAPSHOT.jar started by root in /root/SERVICE)
+2026-09-05T01:44:05.631+09:00  INFO 2064 --- [demo] [           main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-05T01:44:07.485+09:00  INFO 2064 --- [demo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-05T01:44:07.612+09:00  INFO 2064 --- [demo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 4 JPA repository interfaces.
+2026-09-05T01:44:08.786+09:00  INFO 2064 --- [demo] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 80 (http)
+2026-09-05T01:44:08.817+09:00  INFO 2064 --- [demo] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-05T01:44:08.819+09:00  INFO 2064 --- [demo] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-05T01:44:08.996+09:00  INFO 2064 --- [demo] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3223 ms
+2026-09-05T01:44:09.900+09:00  INFO 2064 --- [demo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-05T01:44:10.009+09:00  INFO 2064 --- [demo] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-09-05T01:44:10.901+09:00  INFO 2064 --- [demo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-05T01:44:10.963+09:00  INFO 2064 --- [demo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-05T01:44:11.301+09:00  INFO 2064 --- [demo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@696105c4
+2026-09-05T01:44:11.303+09:00  INFO 2064 --- [demo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-05T01:44:11.407+09:00  WARN 2064 --- [demo] [           main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-09-05T01:44:11.457+09:00  INFO 2064 --- [demo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://192.168.40.20:3306/shelter_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: shelter_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-05T01:44:13.113+09:00  INFO 2064 --- [demo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-05T01:44:13.220+09:00  INFO 2064 --- [demo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-05T01:44:13.397+09:00  INFO 2064 --- [demo] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-05T01:44:14.864+09:00  WARN 2064 --- [demo] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-05T01:44:14.897+09:00  INFO 2064 --- [demo] [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-05T01:44:15.789+09:00  INFO 2064 --- [demo] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-09-05T01:44:15.945+09:00  INFO 2064 --- [demo] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 80 (http) with context path '/'
+2026-09-05T01:44:15.973+09:00  INFO 2064 --- [demo] [           main] com.example.demo.DemoApplication         : Started DemoApplication in 11.291 seconds (process running for 12.293)
+2026-09-05T01:50:12.971+09:00  INFO 2064 --- [demo] [p-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-05T01:50:12.971+09:00  INFO 2064 --- [demo] [p-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-05T01:50:12.979+09:00  INFO 2064 --- [demo] [p-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+Hibernate: select dt1_0.id,dt1_0.is_active,dt1_0.name,dt1_0.table_name from disaster_tab dt1_0 where dt1_0.is_active=true order by dt1_0.id
+Hibernate: select es1_0.shlt_id,es1_0.ctpv_nm,es1_0.daddr,es1_0.fclt_nm,es1_0.lat,es1_0.lot,es1_0.mng_dept_nm,es1_0.sgg_nm from earthquake es1_0 where es1_0.lat between ? and ? and es1_0.lot between ? and ?
+Hibernate: SELECT * FROM airstrike WHERE (((CAST(lat AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lot AS DOUBLE) BETWEEN ? AND ?)) OR ((CAST(lot AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lat AS DOUBLE) BETWEEN ? AND ?))) OR shltid LIKE 'USER_%'
+Hibernate: select ars1_0.shlt_id,ars1_0.ctpv_nm,ars1_0.daddr,ars1_0.fclt_nm,ars1_0.lat,ars1_0.lot,ars1_0.mng_dept_nm,ars1_0.sgg_nm from airstrike ars1_0
+Hibernate: SELECT * FROM flood WHERE (((CAST(lat AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lot AS DOUBLE) BETWEEN ? AND ?)) OR ((CAST(lot AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lat AS DOUBLE) BETWEEN ? AND ?))) OR shlt_id LIKE 'USER_%'
+Hibernate: select fs1_0.shlt_id,fs1_0.ctpv_nm,fs1_0.daddr,fs1_0.fclt_nm,fs1_0.lat,fs1_0.lot,fs1_0.mng_dept_nm,fs1_0.sgg_nm from flood fs1_0
+Hibernate: select dt1_0.id,dt1_0.is_active,dt1_0.name,dt1_0.table_name from disaster_tab dt1_0 where dt1_0.is_active=true order by dt1_0.id
+Hibernate: select es1_0.shlt_id,es1_0.ctpv_nm,es1_0.daddr,es1_0.fclt_nm,es1_0.lat,es1_0.lot,es1_0.mng_dept_nm,es1_0.sgg_nm from earthquake es1_0 where es1_0.lat between ? and ? and es1_0.lot between ? and ?
+Hibernate: select dt1_0.id,dt1_0.is_active,dt1_0.name,dt1_0.table_name from disaster_tab dt1_0 where dt1_0.is_active=true order by dt1_0.id
+Hibernate: select es1_0.shlt_id,es1_0.ctpv_nm,es1_0.daddr,es1_0.fclt_nm,es1_0.lat,es1_0.lot,es1_0.mng_dept_nm,es1_0.sgg_nm from earthquake es1_0 where es1_0.lat between ? and ? and es1_0.lot between ? and ?
+Hibernate: select es1_0.shlt_id,es1_0.ctpv_nm,es1_0.daddr,es1_0.fclt_nm,es1_0.lat,es1_0.lot,es1_0.mng_dept_nm,es1_0.sgg_nm from earthquake es1_0 where es1_0.lat between ? and ? and es1_0.lot between ? and ?
+Hibernate: SELECT * FROM airstrike WHERE (((CAST(lat AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lot AS DOUBLE) BETWEEN ? AND ?)) OR ((CAST(lot AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lat AS DOUBLE) BETWEEN ? AND ?))) OR shltid LIKE 'USER_%'
+Hibernate: select ars1_0.shlt_id,ars1_0.ctpv_nm,ars1_0.daddr,ars1_0.fclt_nm,ars1_0.lat,ars1_0.lot,ars1_0.mng_dept_nm,ars1_0.sgg_nm from airstrike ars1_0
+Hibernate: SELECT * FROM flood WHERE (((CAST(lat AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lot AS DOUBLE) BETWEEN ? AND ?)) OR ((CAST(lot AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lat AS DOUBLE) BETWEEN ? AND ?))) OR shlt_id LIKE 'USER_%'
+Hibernate: select fs1_0.shlt_id,fs1_0.ctpv_nm,fs1_0.daddr,fs1_0.fclt_nm,fs1_0.lat,fs1_0.lot,fs1_0.mng_dept_nm,fs1_0.sgg_nm from flood fs1_0
+Hibernate: SELECT * FROM flood WHERE (((CAST(lat AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lot AS DOUBLE) BETWEEN ? AND ?)) OR ((CAST(lot AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lat AS DOUBLE) BETWEEN ? AND ?))) OR shlt_id LIKE 'USER_%'
+Hibernate: select fs1_0.shlt_id,fs1_0.ctpv_nm,fs1_0.daddr,fs1_0.fclt_nm,fs1_0.lat,fs1_0.lot,fs1_0.mng_dept_nm,fs1_0.sgg_nm from flood fs1_0
+Hibernate: SELECT * FROM flood WHERE (((CAST(lat AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lot AS DOUBLE) BETWEEN ? AND ?)) OR ((CAST(lot AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lat AS DOUBLE) BETWEEN ? AND ?))) OR shlt_id LIKE 'USER_%'
+Hibernate: select fs1_0.shlt_id,fs1_0.ctpv_nm,fs1_0.daddr,fs1_0.fclt_nm,fs1_0.lat,fs1_0.lot,fs1_0.mng_dept_nm,fs1_0.sgg_nm from flood fs1_0
+Hibernate: SELECT * FROM flood WHERE (((CAST(lat AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lot AS DOUBLE) BETWEEN ? AND ?)) OR ((CAST(lot AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lat AS DOUBLE) BETWEEN ? AND ?))) OR shlt_id LIKE 'USER_%'
+Hibernate: select fs1_0.shlt_id,fs1_0.ctpv_nm,fs1_0.daddr,fs1_0.fclt_nm,fs1_0.lat,fs1_0.lot,fs1_0.mng_dept_nm,fs1_0.sgg_nm from flood fs1_0
+Hibernate: SELECT * FROM flood WHERE (((CAST(lat AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lot AS DOUBLE) BETWEEN ? AND ?)) OR ((CAST(lot AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lat AS DOUBLE) BETWEEN ? AND ?))) OR shlt_id LIKE 'USER_%'
+Hibernate: select fs1_0.shlt_id,fs1_0.ctpv_nm,fs1_0.daddr,fs1_0.fclt_nm,fs1_0.lat,fs1_0.lot,fs1_0.mng_dept_nm,fs1_0.sgg_nm from flood fs1_0
+Hibernate: SELECT * FROM flood WHERE (((CAST(lat AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lot AS DOUBLE) BETWEEN ? AND ?)) OR ((CAST(lot AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lat AS DOUBLE) BETWEEN ? AND ?))) OR shlt_id LIKE 'USER_%'
+Hibernate: select fs1_0.shlt_id,fs1_0.ctpv_nm,fs1_0.daddr,fs1_0.fclt_nm,fs1_0.lat,fs1_0.lot,fs1_0.mng_dept_nm,fs1_0.sgg_nm from flood fs1_0
+Hibernate: SELECT * FROM flood WHERE (((CAST(lat AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lot AS DOUBLE) BETWEEN ? AND ?)) OR ((CAST(lot AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lat AS DOUBLE) BETWEEN ? AND ?))) OR shlt_id LIKE 'USER_%'
+Hibernate: select fs1_0.shlt_id,fs1_0.ctpv_nm,fs1_0.daddr,fs1_0.fclt_nm,fs1_0.lat,fs1_0.lot,fs1_0.mng_dept_nm,fs1_0.sgg_nm from flood fs1_0
+Hibernate: SELECT * FROM flood WHERE (((CAST(lat AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lot AS DOUBLE) BETWEEN ? AND ?)) OR ((CAST(lot AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lat AS DOUBLE) BETWEEN ? AND ?))) OR shlt_id LIKE 'USER_%'
+Hibernate: select fs1_0.shlt_id,fs1_0.ctpv_nm,fs1_0.daddr,fs1_0.fclt_nm,fs1_0.lat,fs1_0.lot,fs1_0.mng_dept_nm,fs1_0.sgg_nm from flood fs1_0
+Hibernate: SELECT * FROM flood WHERE (((CAST(lat AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lot AS DOUBLE) BETWEEN ? AND ?)) OR ((CAST(lot AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lat AS DOUBLE) BETWEEN ? AND ?))) OR shlt_id LIKE 'USER_%'
+Hibernate: select fs1_0.shlt_id,fs1_0.ctpv_nm,fs1_0.daddr,fs1_0.fclt_nm,fs1_0.lat,fs1_0.lot,fs1_0.mng_dept_nm,fs1_0.sgg_nm from flood fs1_0
+Hibernate: SELECT * FROM flood WHERE (((CAST(lat AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lot AS DOUBLE) BETWEEN ? AND ?)) OR ((CAST(lot AS DOUBLE) BETWEEN ? AND ?) AND (CAST(lat AS DOUBLE) BETWEEN ? AND ?))) OR shlt_id LIKE 'USER_%'
+Hibernate: select fs1_0.shlt_id,fs1_0.ctpv_nm,fs1_0.daddr,fs1_0.fclt_nm,fs1_0.lat,fs1_0.lot,fs1_0.mng_dept_nm,fs1_0.sgg_nm from flood fs1_0
+2026-09-05T14:33:41.067+09:00  INFO 2064 --- [demo] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-05T14:33:41.076+09:00  INFO 2064 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-05T14:33:41.088+09:00  INFO 2064 --- [demo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-05T14:33:41.090+09:00  INFO 2064 --- [demo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-05T14:33:41.098+09:00  INFO 2064 --- [demo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

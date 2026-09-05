@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 # --- [DB 접속 정보 설정] ---
 DB_USER = "root"
 DB_PASSWORD = "root"
-DB_HOST = "localhost"  # 💡 진짜 DB 서버 IP로 수정 완료!
+DB_HOST = "192.168.40.20"  # 💡 진짜 DB 서버 IP로 수정 완료!
 DB_PORT = "3306"
 DB_NAME = "shelter_db"
 

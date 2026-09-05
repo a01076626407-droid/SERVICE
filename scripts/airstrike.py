@@ -66,7 +66,7 @@ BASE_URL = (
 # ============================================================
 
 db_config = {
-    "host": DB_HOST,  # 수정된 진짜 DB 서버 IP 반영
+    "host": 192.168.40.20  # 수정된 진짜 DB 서버 IP 반영
     "user": "root",
     "password": DB_PASSWORD,
     "database": "shelter_db",

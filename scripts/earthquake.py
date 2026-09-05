@@ -39,7 +39,7 @@ DB_PASSWORD = os.getenv(
     "DB_PASSWORD"
 )
 
-DB_HOST = os.getenv("DB_HOST", "localhost")  # .env에서 호스트 주소를 읽어옵니다.
+DB_HOST = os.getenv("DB_HOST", "192.168.40.20")  # .env에서 호스트 주소를 읽어옵니다.
 
 
 if not EARTHQUAKE_API_KEY:
